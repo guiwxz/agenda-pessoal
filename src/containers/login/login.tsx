@@ -29,8 +29,6 @@ export const Login: React.FC<React.PropsWithChildren> = () => {
           username
         });
 
-        console.log(response);
-        
 
         signIn({
           token: response.accessToken,

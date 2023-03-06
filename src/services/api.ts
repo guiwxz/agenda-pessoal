@@ -1,5 +1,6 @@
 import { AxiosError, AxiosResponse } from "axios";
 import { Contacts } from "../store/contacts/contacts.types";
+import { Users } from "../store/users/users.types";
 import { SignInPayload, SignInRequestData } from "./api.types";
 import { getAPIClient } from "./apiWithContext";
 
@@ -116,6 +117,28 @@ const api = {
       .then(parseResponse)
       .catch(parseError);
   },
+  fetchUser: async (id: number) => {
+    return await baseApi
+      .get(`/api/usuario/buscar/${id}`, {
+        method: "GET",
+      })
+      .then(parseResponse)
+      .catch((err) => console.warn(err));
+  },
+  postUser: async (user: Users) => {
+    return await baseApi.post("/api/usuario/salvar", user, {
+      method: "POST",
+    })
+      .then(parseResponse)
+      .catch(parseError);
+  },
+  updateUser: async (user: Users) => {
+    return await baseApi.put("/api/usuario/atualizar", user, {
+      method: "PUT",
+    })
+      .then(parseResponse)
+      .catch(parseError);
+  }
 
 };
 

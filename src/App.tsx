@@ -3,6 +3,7 @@ import { Home } from "./containers/home/home"
 import { Login } from "./containers/login/login"
 
 import { AppWrapper } from "./components/AppWrapper"
+import { MyUser } from "./containers/myUser/myUser"
 
 
 function App() {
@@ -16,6 +17,14 @@ function App() {
           element={
             <AppWrapper>
               <Home />
+            </AppWrapper>
+          }
+        />
+        <Route 
+          path="/meu-cadastro" 
+          element={
+            <AppWrapper>
+              <MyUser />
             </AppWrapper>
           }
         />

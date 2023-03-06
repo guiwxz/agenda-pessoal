@@ -25,3 +25,17 @@ export const formatPhone = (value: string): string => {
 
   return formatStringByPattern(pattern as string, val);
 }
+
+export const formatCpf = (value: string): string => {
+  const val = String(value).replace(/\D/g, '');
+  let pattern = '999.999.999-99';
+
+  return formatStringByPattern(pattern as string, val);
+}
+
+export const formatBornDate = (value: string): string => {
+  const val = String(value).replace(/\D/g, '');
+  let pattern = '9999-99-99';
+
+  return formatStringByPattern(pattern as string, val);
+}

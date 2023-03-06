@@ -32,14 +32,12 @@ export const ModalContent: React.FC<ModalContentProps> = ({ values, onClose, fav
   }, [values])
 
   const fav = React.useMemo(() => {
-    console.log(favorite);
     
     if (favorite) {
       return true;
     }
     return false;
   }, [favorite])
-console.log(values);
 
   
   const onSubmit = (formValues: Record<string, any>, form: any) => {

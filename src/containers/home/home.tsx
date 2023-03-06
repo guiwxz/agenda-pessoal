@@ -22,10 +22,18 @@ export const Home: React.FC<React.PropsWithChildren> = () => {
 
   const [displayList, setDisplayList] = React.useState<Contacts[]>([]);
 
-  const auth = useAuthUser();
-  console.log(auth());
-  
+  const [openModal, setOpenModal] = React.useState<{
+    open: boolean, 
+    values: any,
+    title: string;
+    favorite?: boolean
+  }>({ 
+    open: false, 
+    values: {},
+    title: '' 
+  });
 
+  
   const [hoverTab, triggerHoverTab] = React.useState<{
     'favoritos'?: boolean,
     'todos'?: boolean
@@ -63,16 +71,7 @@ export const Home: React.FC<React.PropsWithChildren> = () => {
     [contacts, favorites, activeTab]
   )
 
-  const [openModal, setOpenModal] = React.useState<{
-    open: boolean, 
-    values: any,
-    title: string;
-    favorite?: boolean
-  }>({ 
-    open: false, 
-    values: {},
-    title: '' 
-  });
+  
 
   React.useEffect(() => {
     fetchContacts();

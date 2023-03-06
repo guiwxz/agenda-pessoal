@@ -16,8 +16,11 @@ export const AppHeader: React.FC<React.PropsWithChildren> = () => {
           <h2 style={{ fontWeight: 'normal' }}>Minha agenda</h2>
           <Divider />
           <Buttons>
-            <Button style={{ width: '60px' }} onClick={() => navigate('/')} color={colorPalette.blue[900]}>
+            <Button style={{ width: '90px' }} onClick={() => navigate('/')} color={colorPalette.blue[900]}>
               Home
+            </Button>
+            <Button style={{ width: '90px' }} onClick={() => navigate('/meu-cadastro')} color={colorPalette.blue[900]}>
+              Meu cadastro
             </Button>
           </Buttons>
         </Content>
