@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: #626262;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input, textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #626262;
+  border-radius: 20px;
+  border: 2px solid #3B3B3B;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
