@@ -1,4 +1,4 @@
-import {  useSignOut } from "react-auth-kit"
+import { useSignOut } from "react-auth-kit"
 import { useNavigate } from "react-router"
 import { colorPalette } from "../../config/colorPalette"
 import Button from "../Button"
@@ -27,7 +27,6 @@ export const AppHeader: React.FC<React.PropsWithChildren> = () => {
           </Button>
         </Content>
       </Container>
-
       <Footer />
     </div>
   )

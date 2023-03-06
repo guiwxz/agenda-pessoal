@@ -1,9 +1,5 @@
 import { 
   ListWrapper, 
-  ErrorMessage, 
-  ListItem, 
-  ListItemWrapper, 
-  ListTitle, 
   NoContentList 
 } from "./list.styles"
 
