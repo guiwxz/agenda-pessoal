@@ -17,7 +17,6 @@ export const UsersProvider: React.FC<React.PropsWithChildren> = ({ children }) =
     try {
       const { object }: ReturnTypeFetchUser = await api.fetchUser(id);
       setUser(object.usuario);
-      console.log(object);
       
     } catch(e) {
       console.warn(e);
@@ -27,7 +26,6 @@ export const UsersProvider: React.FC<React.PropsWithChildren> = ({ children }) =
   const updateContact = async (user: Users) => {
     try {
       const response = await api.updateUser(user);
-      console.log(response);
       
       toggleSnackbar({
         message: response.message,
@@ -37,7 +35,6 @@ export const UsersProvider: React.FC<React.PropsWithChildren> = ({ children }) =
 
       fetchUser(user.id);
     } catch (err: any) {
-      console.log(err);
       
       toggleSnackbar({
         message: err.message,

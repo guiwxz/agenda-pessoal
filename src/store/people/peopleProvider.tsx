@@ -15,7 +15,6 @@ export const PeopleProvider: React.FC<React.PropsWithChildren> = ({ children }) 
     try {
       const response = await api.fetchPeople(id);
       setPeople(response);
-      console.log(response);
       
     } catch(e) {
       console.warn(e);

@@ -26,7 +26,6 @@ export const ContactsProvider: React.FC<React.PropsWithChildren> = ({ children }
   const postContact = async (contact: Contacts) => {
     try {
       const response = await api.postContact(contact);
-      console.log(response);
       
       toggleSnackbar({
         message: response.message,
@@ -36,7 +35,6 @@ export const ContactsProvider: React.FC<React.PropsWithChildren> = ({ children }
 
       fetchContacts();
     } catch (err: any) {
-      console.log(err);
       
       toggleSnackbar({
         message: err.message,
@@ -50,7 +48,6 @@ export const ContactsProvider: React.FC<React.PropsWithChildren> = ({ children }
   const deleteContact = async (id: number) => {
     try {
       const response = await api.deleteContact(id);
-      console.log(response);
 
       toggleSnackbar({
         message: response.message,
@@ -90,7 +87,6 @@ export const ContactsProvider: React.FC<React.PropsWithChildren> = ({ children }
   const postFavorite = async (contact: Contacts) => {
     try {
       const response = await api.postFavorite(contact);
-      console.log(response);
       
       toggleSnackbar({
         message: response.message,
@@ -100,7 +96,6 @@ export const ContactsProvider: React.FC<React.PropsWithChildren> = ({ children }
 
       fetchContacts();
     } catch (err: any) {
-      console.log(err);
       
       toggleSnackbar({
         message: err.message,
@@ -114,7 +109,6 @@ export const ContactsProvider: React.FC<React.PropsWithChildren> = ({ children }
   const deleteFavorite = async (id: number) => {
     try {
       const response = await api.deleteFavorite(id);
-      console.log(response);
 
       toggleSnackbar({
         message: response.message,
